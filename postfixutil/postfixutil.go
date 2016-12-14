@@ -11,7 +11,8 @@ import "regexp"
 const (
 	softDSN string = "5.2.0 5.2.1 5.2.2 5.3.1 5.4.5 5.5.3"
 	queueIDPattern string = "\\]:\\s([A-Z0-9]+):"
-	logPattern string = "^([A-Za-z]{3}\\s+\\d+ [0-9:]{8}) .*? .*?: ([A-Z0-9]+): to=<(.*?)>, relay=(.*?), delay=(.*?), delays=(.*?), dsn=(.*?), status=(.*?)$"
+	logPattern     string = "^([A-Za-z]{3}\\s+\\d+ [0-9:]{8}) .*? .*?: ([A-Z0-9]+): to=<(.*?)>, (?:orig_to=<.*?>, )?relay=(.*?), delay=(.*?), delays=(.*?), dsn=(.*?), status=(.*?)$"
+
 )
 
 type Bounce struct {
