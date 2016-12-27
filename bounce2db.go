@@ -1,11 +1,14 @@
 package main
 
-import "log"
-import "os"
-import "flag"
-import "./postfixutil"
-import "encoding/json"
-import "gopkg.in/mgo.v2"
+import (
+	"encoding/json"
+	"flag"
+	"log"
+	"os"
+
+	"github.com/amnay-mo/postfix-bounce/postfixutil"
+	"gopkg.in/mgo.v2"
+)
 
 const (
 	BounceCollection string = "bounces"
